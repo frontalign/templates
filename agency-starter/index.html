@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FrontAlign Starter Template | Powering brands with creativity.</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Eyruz Studio">
+  <meta property="og:locale" content="az_AZ">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Preconnect (only needed ones) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts (optimized) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- FrontAlign CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frontalign@1.0.0/dist/css/frontalign.min.css">
+
+  <!-- Icons (optional: async trick) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print"
+    onload="this.media='all'">
+
+  <!-- Lucide -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.469.0/font/lucide.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+<style>
+.hero {
+  background:
+    radial-gradient(circle at 20% 80%, oklch(60% 0.25 300 / 0.25), transparent 40%),
+    radial-gradient(circle at 80% 20%, oklch(60% 0.2 250 / 0.25), transparent 40%),
+    linear-gradient(180deg, oklch(98% 0 0) 0%, oklch(95% 0.02 270) 50%, oklch(92% 0.04 270) 100%);
+}
+
+[fa-theme="dark"] .hero {
+  background:
+    radial-gradient(circle at 20% 80%, oklch(60% 0.25 300 / 0.15), transparent 40%),
+    radial-gradient(circle at 80% 20%, oklch(60% 0.2 250 / 0.15), transparent 40%),
+    linear-gradient(180deg, oklch(12% 0 0) 0%, oklch(14% 0.02 270) 50%, oklch(16% 0.04 270) 100%);
+}
+.dark-mode-toggler {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #313840;
+    background: var(--dark);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-out, background 0.3s ease-out;
+    z-index: 9999;
+    padding:0.75rem 1rem;
+}
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+
+  <!--  Navbar  -->
+<nav class="navbar lg:is-expand is-medium">
+
+  <div class="navbar-start">
+    <a class="navbar-brand lg:ps-6 xl:ps-6" href="/">
+      Agency
+    </a>
+  </div>
+
+<div class="navbar-center">
+  <nav class="navbar-links">
+        <ul class="nav font-nav">
+          <li class="nav-item"><a class="nav-link text-large" href="/#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-large" href="/#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link text-large" href="/#contact">Contact</a></li>
+        </ul>
+  </nav>
+</div>
+
+  <div class="navbar-end">
+      <a href="#" class="button is-dark is-square gap-2">
+        Start new Project 
+        <i class="fas fa-arrow-right btn-icon" style="line-height: 1;"></i>
+      </a>
+
+      <!-- Hamburger menu -->
+        <!-- Mobile toggler -->
+        <button class="navbar-toggler" navbar-menu-id="#main-nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+  </div>
+
+</nav>
+  <!-- Collapsible mobile menu -->
+  <div class="navbar-menu" id="main-nav-menu">
+    <ul class="nav font-nav">
+      <li class="nav-item"><a class="nav-link text-large" href="/#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link text-medium" href="/#portfolio">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link text-medium" href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!--  Hero  -->
+<section class="hero p-4" style="--space-lg:8rem" id="home">
+
+  <div class="container-full is-relative w-full">
+    <div class="hero-tag is-relative">Baku, Azerbaijan <span class="is-absolute w-2 h-2 bg-success color-white rounded-circle"></span></div>
+
+    <h1 class="hero-headline">
+      We build <em>strong</em> brands<strong>.</strong>
+    </h1>
+
+    <div class="hero-bottom">
+      <p class="hero-subline">
+        We elevate your brand to the next level through creativity, strategy, and digital innovation.
+      </p>
+      <div class="hero-actions flex flex-align-center gap-3">
+        <a href="#work" class="button is-primary-outline gap-2">
+          View Our Work <i class="fas fa-arrow-right btn-icon"></i>
+        </a>
+        <a href="#contact" class="button is-primary-ghost">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!--  Partners  -->
+<section class="container overflow-hidden my-4">
+  <h3 class="text-center mb-6">We partnered these top companies</h3>
+  <div class="marquee-track is-flex justify-content-center gap-4">
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-blue is-flex place-center">G</div>
+  <span>Gridova</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-purple is-flex place-center">N</div>
+  <span>Nexlify</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-green is-flex place-center">S</div>
+  <span>Stackra</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-red is-flex place-center">A</div>
+  <span>Airwave</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-teal is-flex place-center">P</div>
+  <span>Payvex</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-yellow is-flex place-center">C</div>
+  <span>Cloudora</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-pink is-flex place-center">F</div>
+  <span>Flexio</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-teal is-flex place-center">D</div>
+  <span>Datavix</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-purple-700 is-flex place-center">V</div>
+  <span>Vortexo</span>
+</div>
+
+<div class="marquee-item is-flex flex-column place-center gap-2">
+  <div class="thumbnail-image is-xsmall bg-gray is-flex place-center">Z</div>
+  <span>Zenpulse</span>
+</div>
+  </div>
+</section>
+  <!--  Services  -->
+<section class="services py-6">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="text-primary text-sm"
+        style="font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;">What we do</span>
+      <h2 class="text-3xl font-bold">Our services</h2>
+      <p class="text-muted">We provide modern solutions to help your business grow faster.</p>
+    </div>
+
+    <div class="is-grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <!-- Web Development -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#E6F1FB;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="14" rx="2" />
+            <path d="M8 20h8M12 18v2" />
+          </svg>
+        </div>
+        <h3>Web development</h3>
+        <p>Fast, scalable and modern web applications.</p>
+      </div>
+
+      <!-- Mobile Development -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#E1F5EE;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="7" y="2" width="10" height="20" rx="2" />
+            <path d="M12 18h.01" />
+          </svg>
+        </div>
+        <h3>Mobile development</h3>
+        <p>Cross-platform mobile apps with smooth UX.</p>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#EEEDFE;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </div>
+        <h3>UI/UX design</h3>
+        <p>Clean and user-friendly interface design.</p>
+      </div>
+
+      <!-- Performance -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#FAEEDA;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <h3>Performance</h3>
+        <p>Optimized speed and SEO improvements.</p>
+      </div>
+
+      <!-- Security -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#FCEBEB;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A32D2D" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </div>
+        <h3>Security</h3>
+        <p>Advanced protection for your systems.</p>
+      </div>
+
+      <!-- Cloud Services -->
+      <div class="card service-card">
+        <div class="service-icon" style="background:#EAF3DE;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+          </svg>
+        </div>
+        <h3>Cloud services</h3>
+        <p>Scalable cloud infrastructure solutions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!--  Portfolio  -->
+<section class="services py-6 bg-light">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="text-primary text-sm"
+        style="font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;">Our Portfolio</span>
+      <h2 class="text-3xl font-bold">Our Works</h2>
+      <p class="text-muted">We provide modern solutions to help your business grow faster.</p>
+    </div>
+
+    <div class="is-grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <!-- Image 1-->
+       <div class="p-2">
+    <img class="image fa-lazy-image h-96" data-src="assets/images/image1.jpg"alt="Image 1">
+  </div>
+
+        <div class="p-2">
+          <img class="image fa-lazy-image h-96" data-src="assets/images/image2.jpg" alt="Image 1">
+        </div>
+
+              <div class="p-2">
+                <img class="image fa-lazy-image h-96" data-src="assets/images/image3.jpg" alt="Image 1">
+              </div>
+
+    </div>
+  </div>
+</section>
+  <!--  Blog  -->
+<section class="blog-section py-6" id="blog">
+  <div class="container">
+        <h2 class="section-title text-3xl font-bold">Latest Blog Posts</h2> <a class="button is-ghost gap-2 " href="/#blog">
+          All Articles <i class="fas fa-arrow-right"></i>
+      </a>
+
+    <div class="is-grid grid-cols-auto-fit-lg gap-6">
+
+      <article class="blog-card p-4">
+        <div class="blog-meta is-flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase ">Branding</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">April 12, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#" class="nav-link"style="--nav-text:var(--blue-600);">Building a Strong Brand Identity</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          A recognizable brand is more than a logo — it's the feeling people get when they interact with your business.
+          Learn the key steps to craft a consistent, scalable identity that resonates across every touchpoint.
+        </p>
+      </article>
+
+      <article class="blog-card p-4">
+        <div class="blog-meta flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase ">Design</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">March 28, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#"class="nav-link"style="--nav-text:var(--blue-600);">UI/UX Psychology in Practice</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          Great design is invisible — it guides users without them noticing. Explore how cognitive biases, visual
+          hierarchy, and micro-interactions shape the way people navigate digital products.
+        </p>
+      </article>
+
+      <article class="blog-card p-4">
+        <div class="blog-meta flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase ">Marketing</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">March 5, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#"class="nav-link"style="--nav-text:var(--blue-600);">SEO & Branding: A Unified Strategy</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          Visibility and credibility go hand in hand. When your SEO strategy aligns with your brand voice, you don't
+          just rank higher — you build lasting trust with the audience that matters most.
+        </p>
+      </article>
+
+      <article class="blog-card p-4">
+        <div class="blog-meta flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase ">Development</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">February 18, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#"class="nav-link"style="--nav-text:var(--blue-600);">Performance-First Web Development</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          Speed is a feature. Slow load times silently kill conversions and damage SEO rankings. Discover practical
+          techniques — from lazy loading to critical CSS — that make your site feel instant.
+        </p>
+      </article>
+
+      <article class="blog-card p-4">
+        <div class="blog-meta flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase ">Strategy</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">February 3, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#"class="nav-link"style="--nav-text:var(--blue-600);">Content Strategy That Actually Converts</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          Publishing content without a strategy is just noise. Find out how to map content to your customer journey,
+          build topical authority, and turn readers into loyal clients with a purpose-driven approach.
+        </p>
+      </article>
+
+      <article class="blog-card p-4">
+        <div class="blog-meta flex items-center gap-3 mb-3">
+          <span class="blog-category text-xsmall text-uppercase opacity-50">Tools</span>
+          <span class="opacity-30">·</span>
+          <span class="blog-date text-xsmall opacity-50">January 21, 2025</span>
+        </div>
+        <h3 class="blog-title font-semibold mb-2">
+          <a href="#"class="nav-link"style="--nav-text:var(--blue-600);">Design Systems: From Zero to Scalable</a>
+        </h3>
+        <p class="blog-excerpt text-small opacity-70">
+          A solid design system saves hundreds of hours across teams. Learn how to build a token-based system with
+          reusable components that keeps your product consistent as it grows.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <!--  Contact  -->
+
+<section class="container my-6" id="contact">
+    <div class="is-grid lg:grid-cols-2 xl:grid-cols-2">
+
+      <!-- Left info -->
+      <div class="contact-info-block bg-dark text-white p-4">
+
+        <div class="section-tag text-large opacity-70">
+          Contact Us
+        </div>
+
+        <h2 class="section-title text-3xl font-bold mb-4 text-light">
+          Let’s talk about your <em>project</em>
+        </h2>
+
+        <p class=" mb-6 text-white">
+          Have a project in mind, a question, or a partnership idea?
+          We’d love to hear from you.
+        </p>
+
+        <ul class="form-row is-grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-4">
+
+          <li class="contact-detail-item is-flex items-center gap-4">
+            <div class="contact-detail-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <div class="text-sm opacity-60">Email</div>
+              <div>hello@eyruz.com</div>
+            </div>
+          </li>
+
+          <li class="contact-detail-item is-flex items-center gap-4">
+            <div class="contact-detail-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <div class="text-sm opacity-60">Phone</div>
+              <div>+994 (50) 000 00 00</div>
+            </div>
+          </li>
+
+          <li class="contact-detail-item is-flex items-center gap-4">
+            <div class="contact-detail-icon">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div>
+              <div class="text-sm opacity-60">Location</div>
+              <div>Baku, Azerbaijan</div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Right form -->
+      <form class="contact-form p-6">
+
+        <div class="form-title text-xl font-semibold mb-2">
+          Send a Message
+        </div>
+
+        <div class="form-subtitle text-sm opacity-70 mb-6">
+          Fill out the form and we’ll get back to you within 24 hours.
+        </div>
+
+        <!-- row -->
+        <div class="form-row is-grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-4">
+
+          <div class="form-group">
+            <label class="form-label" for="f-name">First Name</label>
+            <input class="form-input" type="text" id="f-name" placeholder="John">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-surname">Last Name</label>
+            <input class="form-input" type="text" id="f-surname" placeholder="Doe">
+          </div>
+
+        </div>
+
+        <!-- row -->
+        <div class="form-row grid is-grid-cols-2 gap-4 mb-4">
+
+          <div class="form-group">
+            <label class="form-label" for="f-email">Email</label>
+            <input class="form-input" type="email" id="f-email" placeholder="email@example.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="f-phone">Phone</label>
+            <input class="form-input" type="tel" id="f-phone" placeholder="+994 50 000 00 00">
+          </div>
+
+        </div>
+
+        <!-- select -->
+        <div class="form-group mb-4">
+          <label class="form-label" for="f-service">Service</label>
+          <select class="form-select" id="f-service">
+            <option disabled selected>Select a service...</option>
+            <option>Brand Identity</option>
+            <option>Web Design & Development</option>
+            <option>Digital Marketing</option>
+            <option>UI/UX Design</option>
+            <option>Content Strategy</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- select -->
+        <div class="form-group mb-4">
+          <label class="form-label" for="f-budget">Budget</label>
+          <select class="form-select" id="f-budget">
+            <option disabled selected>Select budget...</option>
+            <option>$300 – $600</option>
+            <option>$600 – $2,000</option>
+            <option>$2,000 – $5,000</option>
+            <option>$5,000+</option>
+          </select>
+        </div>
+
+        <!-- textarea -->
+        <div class="form-group mb-6">
+          <label class="form-label" for="f-message">Message</label>
+          <textarea class="form-input" id="f-message" rows="4" placeholder="Tell us about your project..."></textarea>
+        </div>
+
+        <!-- submit -->
+        <div class="form-submit">
+          <button type="submit" class="button is-square is-primary gap-2 is-large">
+            Send Message <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+</section>
+  <!--  Footer  -->
+<footer class="footer py-6">
+  <div class="container">
+    <!-- bottom -->
+    <div class="flex items-center is-flex justify-content-center border-top pt-4">
+      <div>© 2026 FrontAlign. All rights reserved.</div>
+      <div>Designed & Built by Eyruz Badalzada with FrontAlign</div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/frontalign@1.0.0/dist/js/frontalign.min.js"></script>
+  <script>
+    const faApp = new FrontAlign({fonts: [
+        {
+          family: 'Inter',
+          alias: 'body',
+          category: 'sans-serif',
+          weights: '400,500,600'
+        },
+        {
+          family: 'Syne',
+          alias: 'nav',
+          category: 'sans-serif',
+          weights: '500,600'
+        }
+      ]});
+    faApp.darkMode();
+  </script>
+
+</body>
+
+</html>
