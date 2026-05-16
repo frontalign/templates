@@ -1,41 +1,28 @@
 # FrontAlign Templates
 
-A collection of ready-to-use HTML templates built with the FrontAlign framework. Each template is minimal, responsive, and easy to customize.
+A growing collection of free, ready-to-use HTML templates built with the [FrontAlign](https://www.frontalign.dev) framework. Each template is minimal, responsive, and easy to customize.
 
-## Available Templates
-
-### Agency
-A modern agency landing page template.
-
-**Sections included:**
-- Navbar with responsive toggle
-- Hero section with gradient background
-- Services section with icon cards
-- Client logo marquee
-- Contact section
-- Footer
+---
 
 ## Getting Started
 
-### 1. Download
-
-Clone the repository and navigate to the template you want:
+### 1. Clone a Template
 
 ```bash
-git clone https://github.com/frontalign/templates/{template}.git
-cd frontalign/templates/{template}
+git clone https://github.com/frontalign/templates.git
+cd templates/<template-name>
 ```
 
 ### 2. Install FrontAlign
 
-Via CDN — add to your `<head>`:
+**Via CDN** — add to your `<head>`:
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frontalign/dist/frontalign.min.css">
 <script src="https://cdn.jsdelivr.net/npm/frontalign/dist/frontalign.min.js" defer></script>
 ```
 
-Via npm:
+**Via npm:**
 
 ```bash
 npm install frontalign
@@ -46,6 +33,10 @@ npm install frontalign
 ```javascript
 const fa = new FrontAlign();
 ```
+
+That's it. FrontAlign silently takes over — smart observers watch the DOM, lazy-load components as they appear, and wire everything automatically.
+
+---
 
 ## Customization
 
@@ -65,7 +56,8 @@ Or pass a config object when initializing:
 const fa = new FrontAlign({
     theme: {
         primary: 'oklch(55% 0.2 250)',
-        borderRadius: '8px'
+        spaceMd: '1rem',
+        spaceXl: '2rem',
     },
     fonts: [
         {
@@ -74,24 +66,37 @@ const fa = new FrontAlign({
             category: 'sans-serif',
             weights: '400,500,600'
         }
-    ]
+    ],
+    classes: {
+        'code-block': {
+            'background': '#f4f4f5',
+            'color': '#1a1a2e',
+            dark: {
+                'background': '#0d0d0d',
+                'color': '#e4e4e7',
+            }
+        }
+    }
 });
 ```
+
+---
 
 ## File Structure
 
 ```
 templates/
-├── agency-starter/
+├── template-name/
 │   ├── index.html
-│   ├── assets/
-│   │   └── images
-
+│   └── assets/
+│       └── images/
 ```
+
+---
 
 ## License
 
-Templates are released under the [MIT License](https://www.frontalign.dev/license).  
+Templates are released under the [MIT License](https://www.frontalign.dev/license).
 Feel free to use them in personal and commercial projects.
 
 ---
