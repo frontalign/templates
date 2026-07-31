@@ -1,0 +1,28 @@
+{
+  "name": "frontalign-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "frontalign": "^1.0.8",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "chokidar": "^5.0.0",
+    "cssnano": "^8.0.2",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.10",
+    "glob": "^13.0.6",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@frontalign/create-app",
+  "version": "1.0.1",
+  "description": "Official project creation CLI tool for the FrontAlign UI Framework",
+  "type": "module",
+  "bin": {
+    "create-frontalign": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "frontalign",
+    "create-frontalign",
+    "cli",
+    "template",
+    "starter",
+    "nextjs"
+  ],
+  "author": "FrontAlign",
+  "license": "MIT",
+  "homepage": "https://frontalign.dev",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
