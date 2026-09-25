@@ -36,21 +36,19 @@ const DEFAULT_FRAMEWORK = "nextjs";
  */
 function showHelp() {
   console.log(`
-${c.bold}${c.cyan}create-frontalign${c.reset} — FrontAlign Framework CLI
+${c.bold}${c.cyan}@frontalign/create-app${c.reset} — FrontAlign Framework CLI
 
 ${c.bold}Usage:${c.reset}
-  npx create-frontalign <project-name> --template <template> [--framework <framework>]
+  npx @frontalign/create-app <project-name> --template <template> [--framework <framework>]
 
 ${c.bold}Options:${c.reset}
   --template    ${c.red}(required)${c.reset}  ${VALID_TEMPLATES.join(" | ")}
-  --framework   ${c.gray}(optional)${c.reset}  ${VALID_FRAMEWORKS.join(" | ")}  [default: html]
+  --framework   ${c.gray}(optional)${c.reset}  ${VALID_FRAMEWORKS.join(" | ")}  [default: nextjs]
   --help        Show this help message
 
 ${c.bold}Examples:${c.reset}
-  npx create-frontalign my-site --template landing
-  npx create-frontalign my-site --template landing --framework nextjs
-  npx create-frontalign my-app  --template auth
-  npx create-frontalign my-app  --template auth --framework nextjs
+  npx @frontalign/create-app my-site --template agency
+  npx @frontalign/create-app my-site --template blog --framework nextjs
 `);
 }
 
@@ -86,7 +84,9 @@ function validate({ projectName, template, framework }) {
   const errors = [];
 
   if (!projectName) {
-    errors.push("Project name is required.\n  Example: npx create-frontalign my-app --template landing");
+    errors.push(
+      "Project name is required.\n  Example: npx @frontalign/create-app my-app --template landing",
+    );
   } else if (!/^[a-zA-Z0-9-_]+$/.test(projectName)) {
     errors.push(`"${projectName}" is not a valid project name. Use only letters, numbers, hyphens, and underscores.`);
   }
@@ -194,7 +194,9 @@ async function main() {
   const errors = validate({ projectName, template, framework });
   if (errors.length > 0) {
     errors.forEach((e) => log.error(e));
-    console.log(`\n${c.gray}For help: npx create-frontalign --help${c.reset}\n`);
+    console.log(
+      `\n${c.gray}For help: npx @frontalign/create-app --help${c.reset}\n`,
+    );
     process.exit(1);
   }
 
