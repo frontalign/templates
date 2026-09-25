@@ -1,6 +1,6 @@
 {
   "name": "@frontalign/create-app",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Official project creation CLI tool for the FrontAlign UI Framework",
   "type": "module",
   "bin": {
