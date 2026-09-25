@@ -8,7 +8,6 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Colored Console
 const c = {
   reset: "\x1b[0m",
   bold: "\x1b[1m",
@@ -28,12 +27,9 @@ const log = {
   title: (msg) => console.log(`\n${c.bold}${c.cyan}${msg}${c.reset}\n`),
 };
 
-// Constants
 const VALID_TEMPLATES = ["agency", "blog"];
 const VALID_FRAMEWORKS = ["html", "nextjs"];
 const DEFAULT_FRAMEWORK = "nextjs";
-
-// Helper functions 
 
 /**
  * Prints usage instructions and available options to the console.
@@ -62,9 +58,6 @@ ${c.bold}Examples:${c.reset}
  * Parses CLI arguments from process.argv.
  * Extracts project name, --template, and --framework flags.
  * Exits early if --help or -h is passed.
- *
- * @param {string[]} argv - Raw process.argv array
- * @returns {{ projectName: string|undefined, template: string|null, framework: string }}
  */
 function parseArgs(argv) {
   const args = argv.slice(2);
@@ -74,7 +67,6 @@ function parseArgs(argv) {
     process.exit(0);
   }
 
-  // First non-flag argument is treated as the project name
   const projectName = args.find((a) => !a.startsWith("--"));
 
   const templateIdx = args.indexOf("--template");
@@ -89,9 +81,6 @@ function parseArgs(argv) {
 /**
  * Validates parsed CLI arguments.
  * Checks that project name, template, and framework are all valid.
- *
- * @param {{ projectName: string|undefined, template: string|null, framework: string }} options
- * @returns {string[]} Array of error messages (empty if all valid)
  */
 function validate({ projectName, template, framework }) {
   const errors = [];
@@ -124,9 +113,6 @@ function validate({ projectName, template, framework }) {
 /**
  * Recursively copies a directory from src to dest.
  * Creates destination directory if it does not exist.
- *
- * @param {string} src - Source directory path
- * @param {string} dest - Destination directory path
  */
 function copyDir(src, dest) {
   if (!fs.existsSync(dest)) {
@@ -150,9 +136,6 @@ function copyDir(src, dest) {
 /**
  * Recursively replaces all occurrences of {{PROJECT_NAME}} placeholder
  * in supported text files within the given directory.
- *
- * @param {string} dir - Root directory to process
- * @param {string} projectName - The actual project name to inject
  */
 function replacePlaceholders(dir, projectName) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -176,9 +159,6 @@ function replacePlaceholders(dir, projectName) {
 /**
  * Runs `npm install` inside the given project directory.
  * Used automatically for Next.js templates.
- *
- * @param {string} projectDir - Absolute path to the project directory
- * @returns {boolean} True if installation succeeded, false otherwise
  */
 function installDeps(projectDir) {
   try {
@@ -193,8 +173,6 @@ function installDeps(projectDir) {
 /**
  * Detects the preferred package manager available on the system.
  * Checks for pnpm and yarn before falling back to npm.
- *
- * @returns {"pnpm" | "yarn" | "npm"}
  */
 function detectPackageManager() {
   try {
@@ -208,14 +186,11 @@ function detectPackageManager() {
   return "npm";
 }
 
-// Main 
-
 async function main() {
   log.title("⚡ FrontAlign CLI");
 
   const { projectName, template, framework } = parseArgs(process.argv);
 
-  // Validate all inputs before doing anything
   const errors = validate({ projectName, template, framework });
   if (errors.length > 0) {
     errors.forEach((e) => log.error(e));
@@ -225,18 +200,14 @@ async function main() {
 
   const targetDir = path.resolve(process.cwd(), projectName);
 
-  // templateDir is resolved relative to this file (index.js),
-  // so templates/ must sit alongside index.js in the package root
   const templateDir = path.join(__dirname, "templates", template, framework);
 
-  // Ensure the requested template/framework combination exists
   if (!fs.existsSync(templateDir)) {
     log.error(`Template not found: ${c.cyan}${template}/${framework}${c.reset}`);
     log.error(`Expected path: ${templateDir}`);
     process.exit(1);
   }
 
-  // Prevent overwriting an existing directory
   if (fs.existsSync(targetDir)) {
     log.error(`A folder named "${projectName}" already exists.`);
     log.error("Choose a different name or remove the existing folder.");
@@ -248,12 +219,10 @@ async function main() {
   log.info(`Directory:  ${c.cyan}${targetDir}${c.reset}`);
   console.log();
 
-  // Copy template files into the target directory
   log.step("Copying files...");
   copyDir(templateDir, targetDir);
   log.success("Files copied.");
 
-  // Inject the project name into all placeholder occurrences
   replacePlaceholders(targetDir, projectName);
 
   // For Next.js templates, attempt automatic dependency installation
@@ -269,7 +238,6 @@ async function main() {
 
   // Print next steps based on chosen framework
   const pm = detectPackageManager();
-
   console.log(`\n${c.green}${c.bold}✔ Project created successfully!${c.reset}\n`);
   console.log(`${c.bold}Next steps:${c.reset}`);
   console.log(`  ${c.cyan}cd ${projectName}${c.reset}`);
