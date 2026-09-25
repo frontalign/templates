@@ -1,0 +1,763 @@
+/* Premium agency template layer */
+
+.agency-premium {
+  background:
+    radial-gradient(circle at top left, rgba(234, 179, 8, 0.12), transparent 32rem),
+    var(--body);
+}
+
+.agency-header {
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(18px);
+}
+
+.agency-nav {
+  background: rgba(248, 251, 255, 0.82);
+  border-bottom: 1px solid var(--agency-line);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+}
+
+.agency-mobile-menu {
+  background: rgba(248, 251, 255, 0.96);
+  border-bottom: 1px solid var(--agency-line);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  padding: 1rem;
+}
+
+.agency-brand {
+  align-items: center;
+  color: var(--body-text);
+  display: inline-flex;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.agency-brand-mark {
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--yellow-400));
+  border-radius: 0.8rem;
+  box-shadow: 0 12px 30px rgba(234, 179, 8, 0.22);
+  color: var(--agency-ink);
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 900;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.agency-nav .nav-link {
+  color: var(--body-text) !important;
+}
+
+.agency-nav-cta {
+  margin-inline-start: 0.5rem;
+}
+
+.agency-hero {
+  background:
+    linear-gradient(180deg, rgba(248, 251, 255, 0.96), rgba(255, 255, 255, 0.98)),
+    radial-gradient(circle at 78% 12%, rgba(234, 179, 8, 0.16), transparent 22rem),
+    radial-gradient(circle at 15% 88%, rgba(37, 99, 235, 0.1), transparent 24rem);
+  min-height: calc(100vh - var(--navbar-height));
+  padding-block: 2rem;
+}
+
+.agency-hero-copy,
+.agency-hero-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.agency-hero-orb {
+  border-radius: 9999px;
+  filter: blur(8px);
+  opacity: 0.65;
+  pointer-events: none;
+  position: absolute;
+}
+
+.agency-hero-orb-one {
+  background: rgba(234, 179, 8, 0.18);
+  height: 18rem;
+  right: 5%;
+  top: 7rem;
+  width: 18rem;
+}
+
+.agency-hero-orb-two {
+  background: rgba(59, 130, 246, 0.12);
+  bottom: 5rem;
+  height: 14rem;
+  left: 4%;
+  width: 14rem;
+}
+
+.agency-actions {
+  flex-wrap: wrap;
+}
+
+.agency-check-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 9999px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+  color: var(--body-text);
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.agency-check-card svg,
+.agency-icon-wrap svg,
+.agency-floating-card svg,
+.agency-testimonial-card svg {
+  color: var(--primary);
+}
+
+.agency-dashboard-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  margin-inline-start: auto;
+  max-width: 34rem;
+  position: relative;
+}
+
+.agency-dashboard-top {
+  align-items: center;
+  background: #0b1020;
+  display: flex;
+  gap: 0.45rem;
+  padding: 1rem;
+}
+
+.agency-dashboard-top span {
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 50%;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+
+.agency-dashboard-body {
+  padding: 1.5rem;
+}
+
+.agency-dashboard-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.agency-chart {
+  align-items: flex-end;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  height: 16rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.agency-chart span {
+  background: linear-gradient(180deg, var(--primary), rgba(234, 179, 8, 0.36));
+  border-radius: 9999px 9999px 0.35rem 0.35rem;
+  flex: 1;
+  min-width: 1rem;
+}
+
+.agency-metric-card,
+.agency-price-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.agency-floating-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 9999px;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 800;
+  gap: 0.55rem;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  z-index: 3;
+}
+
+.agency-floating-card-one {
+  left: -0.5rem;
+  top: 5rem;
+}
+
+.agency-floating-card-two {
+  bottom: 4rem;
+  right: -0.5rem;
+}
+
+.agency-logo-strip {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.agency-logo-grid {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.agency-logo-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  color: var(--slate-600);
+  display: flex;
+  font-family: Manrope, var(--font);
+  font-size: 1.05rem;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 4.5rem;
+}
+
+.agency-stat-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.92));
+  padding: 2rem 1rem;
+}
+
+.agency-section-heading {
+  max-width: 46rem;
+}
+
+.agency-section-row {
+  flex-wrap: wrap;
+}
+
+.agency-service-card {
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--body-text) !important;
+  display: block;
+  min-height: 100%;
+  position: relative;
+}
+
+.agency-service-card:hover {
+  border-color: rgba(234, 179, 8, 0.45);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.11);
+  transform: translateY(-0.35rem);
+}
+
+.agency-icon-wrap {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.18), rgba(234, 179, 8, 0.06));
+  border: 1px solid rgba(234, 179, 8, 0.22);
+  border-radius: 1rem;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.agency-dark-section {
+  background:
+    radial-gradient(circle at top right, rgba(234, 179, 8, 0.15), transparent 28rem),
+    linear-gradient(180deg, #0b1020, #111827);
+}
+
+.agency-project-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white !important;
+  display: block;
+}
+
+.agency-project-card img {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agency-project-card:hover img {
+  transform: scale(1.07);
+}
+
+.agency-project-card:hover {
+  border-color: rgba(234, 179, 8, 0.45);
+}
+
+.agency-project-content {
+  padding: 1.25rem;
+}
+
+.agency-process-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.agency-process-item {
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.84);
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.agency-process-step {
+  align-items: center;
+  background: #0b1020;
+  border-radius: 1rem;
+  color: var(--primary);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 900;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.agency-testimonial-card {
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.05);
+}
+
+.agency-stars {
+  color: var(--primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.agency-avatar {
+  align-items: center;
+  background: linear-gradient(135deg, #0b1020, #1f2937);
+  border-radius: 50%;
+  color: var(--primary);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 900;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
+}
+
+.agency-offer-card {
+  background: #0b1020;
+}
+
+.agency-offer-copy {
+  background:
+    radial-gradient(circle at top left, rgba(234, 179, 8, 0.22), transparent 22rem),
+    #0b1020;
+}
+
+.agency-offer-panel {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+    #111827;
+}
+
+.agency-price-card {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.agency-footer {
+  background:
+    radial-gradient(circle at top right, rgba(234, 179, 8, 0.14), transparent 24rem),
+    #080d18;
+  color: var(--slate-300);
+  padding-block: 4rem 2rem;
+}
+
+.agency-footer-cta {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.agency-footer .nav-link {
+  color: var(--slate-300) !important;
+  padding-inline: 0 !important;
+}
+
+.agency-footer .nav-link:hover {
+  color: var(--primary) !important;
+  background: transparent !important;
+}
+
+.agency-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.agency-socials a {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 900;
+  height: 2.25rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.25rem;
+}
+
+.agency-socials a:hover {
+  background: var(--primary);
+  color: #0b1020;
+}
+
+.agency-footer-contact > div {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.65rem;
+  padding: 1rem;
+}
+
+.agency-footer-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--slate-400);
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.content h2 { margin-top: 2rem; margin-bottom: 1rem; font-size: 2rem; font-weight: 700; }
+.content h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.5rem; font-weight: 700; }
+.content p { margin-bottom: 1rem; color: var(--muted); line-height: 1.625; }
+
+@media (min-width: 768px) {
+  .agency-logo-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1023px) {
+  .agency-hero {
+    min-height: auto;
+  }
+
+  .agency-dashboard-card {
+    margin-inline: auto;
+  }
+
+  .agency-floating-card-one,
+  .agency-floating-card-two {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .agency-footer-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .agency-actions,
+  .agency-section-row,
+  .agency-footer-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .agency-actions .button,
+  .agency-footer-cta .button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .agency-check-card {
+    border-radius: 1rem;
+  }
+
+  .agency-chart {
+    height: 12rem;
+  }
+
+  .agency-stat-card {
+    padding: 1.25rem 0.75rem;
+  }
+}
+
+[fa-theme="dark"] .agency-nav,
+[fa-theme="dark"] .agency-mobile-menu {
+  background: rgba(15, 23, 42, 0.86);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[fa-theme="dark"] .agency-hero {
+  background:
+    radial-gradient(circle at 78% 12%, rgba(248, 113, 113, 0.16), transparent 22rem),
+    radial-gradient(circle at 15% 88%, rgba(59, 130, 246, 0.08), transparent 24rem),
+    #0f172a;
+}
+
+[fa-theme="dark"] .agency-check-card,
+[fa-theme="dark"] .agency-dashboard-card,
+[fa-theme="dark"] .agency-floating-card,
+[fa-theme="dark"] .agency-logo-item,
+[fa-theme="dark"] .agency-stat-card,
+[fa-theme="dark"] .agency-service-card,
+[fa-theme="dark"] .agency-process-item,
+[fa-theme="dark"] .agency-testimonial-card {
+  background: rgba(30, 41, 59, 0.72);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[fa-theme="dark"] .agency-dashboard-top,
+[fa-theme="dark"] .agency-process-step {
+  background: #020617;
+}
+
+[fa-theme="dark"] .agency-logo-strip {
+  background: rgba(15, 23, 42, 0.65);
+}
+
+[fa-theme="dark"] .agency-logo-item {
+  color: var(--slate-300);
+}
+
+[fa-theme="dark"] .agency-metric-card,
+[fa-theme="dark"] .agency-price-card {
+  background: var(--surface-raised);
+}
+
+[fa-theme="dark"] .agency-price-card {
+  color: var(--body-text);
+}
+
+.agency-theme-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 9999px;
+  bottom: 1.25rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+  color: var(--body-text);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.25rem;
+  height: 2.5rem;
+  justify-content: center;
+  position: fixed;
+  right: 1.25rem;
+  width: 4.5rem;
+  z-index: 1090;
+}
+
+.agency-theme-toggle span {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 1.75rem;
+  justify-content: center;
+  width: 1.75rem;
+}
+
+.agency-theme-toggle span:first-child {
+  background: var(--primary);
+  color: #0b1020;
+}
+
+[fa-theme="dark"] .agency-theme-toggle {
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[fa-theme="dark"] .agency-theme-toggle span:first-child {
+  background: transparent;
+  color: var(--slate-400);
+}
+
+[fa-theme="dark"] .agency-theme-toggle span:last-child {
+  background: var(--primary);
+  color: #0b1020;
+}
+.agency-hero-visual {
+  isolation: isolate;
+}
+
+.agency-hero-glow {
+  position: absolute;
+  inset: -4rem -2rem auto auto;
+  width: 24rem;
+  height: 24rem;
+  background: radial-gradient(circle, oklch(from var(--warning) l c h / 0.35), transparent 70%);
+  filter: blur(32px);
+  opacity: 0.9;
+  z-index: -2;
+}
+
+.agency-hero-grid {
+  position: absolute;
+  inset: 2rem 0 0 3rem;
+  background-image:
+    linear-gradient(oklch(0% 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0% 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle, black 35%, transparent 72%);
+  z-index: -1;
+}
+
+.agency-dashboard-card {
+  position: relative;
+  max-width: 460px;
+  margin-left: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 32px 90px oklch(0% 0 0 / 0.18),
+    0 0 0 1px oklch(100% 0 0 / 0.7) inset;
+}
+
+.agency-dashboard-top {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1rem;
+  background: #0d1324;
+  color: white;
+}
+
+.agency-dashboard-top span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: oklch(100% 0 0 / 0.28);
+}
+
+.agency-dashboard-top strong {
+  margin-left: 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: oklch(100% 0 0 / 0.75);
+}
+
+.agency-dashboard-body {
+  padding: 1.35rem;
+}
+
+.agency-revenue-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background:
+    linear-gradient(135deg, oklch(from var(--warning) l c h / 0.16), transparent),
+    var(--surface-raised);
+  border: 1px solid oklch(from var(--warning) l c h / 0.22);
+}
+
+.agency-revenue-value {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.agency-growth-pill {
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  background: var(--warning);
+  color: var(--warning-contrast);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.agency-chart {
+  height: 150px;
+  margin-top: 1.25rem;
+  padding: 1rem 0.75rem 0;
+  display: flex;
+  align-items: end;
+  gap: 0.85rem;
+  border-radius: 1rem;
+  background:
+    linear-gradient(to top, oklch(from var(--warning) l c h / 0.12), transparent),
+    linear-gradient(oklch(0% 0 0 / 0.035) 1px, transparent 1px);
+  background-size: auto, 100% 25%;
+}
+
+.agency-chart span {
+  flex: 1;
+  min-width: 0;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(180deg, var(--warning), oklch(from var(--warning) 0.78 c h));
+  box-shadow: 0 12px 24px oklch(from var(--warning) l c h / 0.24);
+}
+
+.agency-metric-card {
+  padding: 0.85rem;
+  border-radius: 0.9rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+}
+
+.agency-floating-card {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  background: oklch(100% 0 0 / 0.88);
+  backdrop-filter: blur(18px);
+  border: 1px solid oklch(100% 0 0 / 0.8);
+  font-size: 0.78rem;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.agency-floating-card svg {
+  color: var(--warning);
+}
+
+.agency-floating-card-one {
+  top: 3.5rem;
+  left: 0;
+}
+
+.agency-floating-card-two {
+  right: -1rem;
+  bottom: 4.5rem;
+}
+
+.agency-floating-card-three {
+  left: 2.5rem;
+  bottom: -1rem;
+}
+
+.agency-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--success);
+  box-shadow: 0 0 0 0.25rem oklch(from var(--success) l c h / 0.15);
+}

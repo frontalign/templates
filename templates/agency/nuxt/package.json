@@ -1,0 +1,24 @@
+{
+  "name": "frontalign-agency",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "frontalign": "1.0.9",
+    "lucide-vue-next": "^1.0.0",
+    "motion-v": "^2.4.4",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "nuxt": "^3.15.4",
+    "typescript": "^5.8.2",
+    "vue-tsc": "^3.3.11"
+  }
+}
