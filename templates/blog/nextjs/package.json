@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "frontalign": "^1.0.8",
+    "frontalign": "^1.0.9",
     "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
