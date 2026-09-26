@@ -23,7 +23,7 @@ npx @frontalign/create-app <project-name> --template <template> [--framework <fr
 | Flag | Required | Description |
 |---|---|---|
 | `--template` | Yes | Starter template to use: `agency`, `blog` |
-| `--framework` | No | Target framework: `nextjs` (default: `nextjs`) |
+| `--framework` | No | Target framework: `nextjs` , `nuxt`  (default: `nextjs`) |
 | `--help`, `-h` | No | Show usage help |
 
 > **Note:** Next.js is currently the only supported framework. Support for additional frameworks (starting with Vue) is planned for future releases.
@@ -34,9 +34,13 @@ npx @frontalign/create-app <project-name> --template <template> [--framework <fr
 # Agency starter (Next.js, default)
 npx @frontalign/create-app my-site --template agency
 
+# Agency starter (Vue)
+npx @frontalign/create-app my-site --template agency --framework nuxt
+
 # Blog starter (Next.js, default)
 npx @frontalign/create-app my-blog --template blog
 ```
+>Only agency theme supports Vue(Nuxt). We work to extend the list.
 
 ## Templates
 
